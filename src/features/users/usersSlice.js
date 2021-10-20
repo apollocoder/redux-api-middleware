@@ -14,6 +14,8 @@ export const counterSlice = createSlice({
 	}
 })
 
+export const { setUsers } = counterSlice.actions
+
 // very simple to add new requests
 // use this as a template:
 export const fetchUsers = callback => ({
@@ -23,8 +25,6 @@ export const fetchUsers = callback => ({
 	resultAction: setUsers /* put the response inside the store... */,
 	callback: callback /* ...or handle it directly in the component */
 })
-
-export const { setUsers } = counterSlice.actions
 
 export const selectUsers = state => state.users.entities
 
