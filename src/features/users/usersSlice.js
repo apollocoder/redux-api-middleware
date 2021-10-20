@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-	entities: []
+	entities: [],
+	token: 'DUMMY_JWT_TOKEN'
 }
 
 export const counterSlice = createSlice({

@@ -9,7 +9,12 @@ export const apiMiddleware =
 			return result
 		}
 
-		const response = await fetch(action.path, { method: action.method })
+		const response = await fetch(action.path, {
+			method: action.method,
+			headers: {
+				Authorization: `Bearer ${getState().users.token}`
+			}
+		})
 		const json = await response.json()
 
 		if (response.ok) {
